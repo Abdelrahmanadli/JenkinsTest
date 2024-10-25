@@ -9,7 +9,7 @@ pipeline {
             }
         }
         stage('Run') {
-            steps {a
+            steps {
                 echo 'Running...'
                 sh 'java HelloWorld'
             }
