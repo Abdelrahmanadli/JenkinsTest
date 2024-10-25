@@ -1,17 +1,17 @@
 pipeline {
     agent any
-
     stages {
         stage('Compile') {
             steps {
                 echo 'Compiling...'
-                sh 'javac HelloWorld.java'
+                bat 'javac HelloWorld.java'
             }
         }
         stage('Run') {
             steps {
-                echo 'Running...'
-                sh 'java HelloWorld'
+                echo 'Starting application...'
+                // Replace nohup with start
+                bat 'start /B java -jar HelloWorld.jar'
             }
         }
     }
